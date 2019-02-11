@@ -1,5 +1,6 @@
 import boto3
 import json, gzip
+from datetime import datetime
 
 from elasticsearch import Elasticsearch
 
@@ -27,8 +28,11 @@ while True:
         data = json.loads(message.body)
         s3Bucket = data['Records'][0]['s3']['bucket']['name']
         s3ObjectKey = data['Records'][0]['s3']['object']['key']
+        
+        timestamp = str(datetime.now())
 
         log = {
+            "timestamp": timestamp,
             "processing_file": s3ObjectKey,
             "loop": i
         }
