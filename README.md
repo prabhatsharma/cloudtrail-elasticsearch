@@ -28,3 +28,7 @@ Cloudtrail -> S3 bucket -> SQS Queue <- container -> elasticsearch
     }
   ]
   ```
+
+  ## S3 bucket prefix for events
+
+  > AWSLogs/107995894928/CloudTrail/
