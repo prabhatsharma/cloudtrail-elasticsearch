@@ -42,4 +42,5 @@ Cloudtrail -> S3 bucket -> SQS Queue <- container -> elasticsearch
       }
     }
   ]
+ }
   ```
